@@ -44,5 +44,5 @@ To run this project, you will need to add the following environment variables to
 
 ## Contributing
 
-Contributions are always welcome, feedback and/or code! We periodically put out promotions offering rewards for feedback & contributions, but feel free to contribute at any time and we will include your name on a shortlist for the following promotion. Send us a brief email to confirm.
+Contributions are always welcome, feedback and/or code! We periodically put out promotions offering rewards for feedback & contributions, but feel free to contribute at any time and we will include your name on a shortlist for the following promotion. Send us a brief email to confirm: [frontdesk@redcloversoftware.ca](mailto:frontdesk@redcloversoftware.ca).
 
