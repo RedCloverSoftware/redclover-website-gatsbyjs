@@ -106,6 +106,7 @@ export const MobileMenuLinks = styled.div`
     font-size: 32px;
     font-weight: 500;
     margin: 2rem 0;
+    color: #bb569f;
   }
 `
 
@@ -135,8 +136,6 @@ export const HeaderInnerContainer = styled.div`
   flex-flow: row wrap;
   align-items: center;
 `
-
-export const HeaderLogo = styled.div``
 
 export const HeaderLinks = styled.div`
   display: flex;

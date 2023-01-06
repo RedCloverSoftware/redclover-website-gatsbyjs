@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-import HeroSection from "../components/HeroSection/HeroSection"
+import HomeHeroSection from "../components/HomeHeroSection/HomeHeroSection"
 import ServicePointsSection from "../components/ServicePointsSection/ServicePointsSection"
 import AboutUsSection from "../components/AboutUsSection/AboutUsSection"
 import TeamSection from "../components/TeamSection/TeamSection"
@@ -22,7 +22,7 @@ const IndexPage = ({ data }) => {
         description={home.data.page_description.text}
       />
 
-      <HeroSection
+      <HomeHeroSection
         primary_heading={home.data.hero_primary_heading.richText[0].text}
         primary_paragraph={home.data.hero_primary_paragraph.richText[0].text}
       />

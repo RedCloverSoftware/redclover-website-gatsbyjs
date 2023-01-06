@@ -10,6 +10,12 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        icon: "src/images/icon.png",
+      },
+    },
+    {
       resolve: `gatsby-source-prismic`,
       options: {
         repositoryName: process.env.GATSBY_PRISMIC_REPO_NAME,

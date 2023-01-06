@@ -24,6 +24,8 @@ export const InnerContainer = styled.div`
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-`
 
-export const HeaderLogo = styled.div``
+  & p {
+    margin: 0;
+  }
+`

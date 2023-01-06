@@ -52,7 +52,7 @@ export const InnerContainer = styled.div`
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  width: 33%;
+  width: 40%;
   margin: 0 auto;
 
   @media screen and (max-width: 1025px) {

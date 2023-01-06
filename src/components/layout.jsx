@@ -29,10 +29,47 @@ const FooterContainer = styled.footer`
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
+    query Navigation {
+      prismicNavigation {
+        data {
+          cta_button {
+            url
+            slug
+            id
+          }
+          cta_button_text
+          nav_links {
+            link_title
+            page_link {
+              url
+              slug
+              id
+            }
+          }
+          nav_logo {
+            localFile {
+              childImageSharp {
+                gatsbyImageData
+              }
+            }
+            alt
+          }
+        }
+      }
+
+      prismicFooter {
+        data {
+          footer_logo {
+            localFile {
+              childImageSharp {
+                gatsbyImageData
+              }
+            }
+            alt
+          }
+          footer_text {
+            richText
+          }
         }
       }
     }
@@ -41,9 +78,19 @@ const Layout = ({ children }) => {
   return (
     <>
       <OuterPageContainer>
-        <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+        <Header
+          logo={data.prismicNavigation.data.nav_logo}
+          nav_links={data.prismicNavigation.data.nav_links}
+          cta_button={{
+            cta_label: data.prismicNavigation.data.cta_button_text,
+            cta_link: data.prismicNavigation.data.cta_button.url,
+          }}
+        />
         <main>{children}</main>
-        <Footer />
+        <Footer
+          logo={data.prismicFooter.data.footer_logo}
+          copyright_text={data.prismicFooter.data.footer_text}
+        />
       </OuterPageContainer>
     </>
   )

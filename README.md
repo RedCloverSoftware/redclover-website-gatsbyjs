@@ -1,4 +1,3 @@
-
 # Red Clover Software Website, GatsbyJS
 
 This is the current public website for the business Red Clover Software Services Inc. Written in GatsbyJS (a React-based Static Site Generator Framework), you will need a NodeJS installation and Yarn in order to build this project. This project depends on a CMS for content - Prismic is our present CMS of choice.
@@ -6,7 +5,6 @@ This is the current public website for the business Red Clover Software Services
 This project is a demonstration of our React/JS capabilities - we are always learning and greatly appreciate any suggestions, insight, or issues to report!
 
 Presently this code is NOT licensed for re-use (with the exception of GatsbyJS itself and any other 3rd party licensed code used in our work), we intend to contribute to the open source community with a more genericized Gatsby starter based on this project.
-
 
 ## Features
 
@@ -18,7 +16,6 @@ Presently this code is NOT licensed for re-use (with the exception of GatsbyJS i
 
 - The Prettier library is used for code formatting.
 
-
 ## Environment Variables
 
 To run this project, you will need to add the following environment variables to your .env file
@@ -28,6 +25,7 @@ To run this project, you will need to add the following environment variables to
 `PRISMIC_ACCESS_TOKEN`
 
 `PRISMIC_CUSTOM_TYPES_API_TOKEN`
+
 ## Roadmap
 
 - Implement tests with Jest and Cypress
@@ -38,11 +36,10 @@ To run this project, you will need to add the following environment variables to
 
 ## Acknowledgements
 
- - [Liam Sherman Parris (Principal Developer and Owner)](https://github.com/LiamJSP)
- - [The GatsbyJS Team](https://www.gatsbyjs.com/about/)
- - [The Prismic Team](https://prismic.io/)
+- [Liam Sherman Parris (Principal Developer and Owner)](https://github.com/LiamJSP)
+- [The GatsbyJS Team](https://www.gatsbyjs.com/about/)
+- [The Prismic Team](https://prismic.io/)
 
 ## Contributing
 
 Contributions are always welcome, feedback and/or code! We periodically put out promotions offering rewards for feedback & contributions, but feel free to contribute at any time and we will include your name on a shortlist for the following promotion. Send us a brief email to confirm: [frontdesk@redcloversoftware.ca](mailto:frontdesk@redcloversoftware.ca).
-

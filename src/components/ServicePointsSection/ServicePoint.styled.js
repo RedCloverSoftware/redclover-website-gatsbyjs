@@ -36,20 +36,4 @@ export const InnerContainer = styled.div`
   & p {
     min-height: 12rem;
   }
-
-  & a {
-    margin: 0 auto;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 900;
-    font-size: 18px;
-    padding: 0.5em 1em;
-
-    border: 1px solid #a23684;
-    border-radius: 2em;
-
-    color: #d480bd;
-    background-color: white;
-    text-decoration: none;
-  }
 `

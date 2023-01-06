@@ -1,6 +1,7 @@
 import React from "react"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
+import CTAButton from "../CTAButton/CTAButton.styled.js"
 import { OuterContainer, InnerContainer } from "./ServicePoint.styled.js"
 
 const ServicePointsSection = props => {
@@ -17,6 +18,10 @@ const ServicePointsSection = props => {
         />
         <h3>{props.service.service_point_heading.text}</h3>
         <p>{props.service.service_point_paragraph.text}</p>
+
+        <CTAButton>
+          <a href={props.service.service_point_cta_link.url}>More Info</a>
+        </CTAButton>
       </InnerContainer>
     </OuterContainer>
   )

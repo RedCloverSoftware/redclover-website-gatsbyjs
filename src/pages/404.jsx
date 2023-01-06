@@ -1,15 +1,24 @@
-import * as React from "react"
-import { useEffect } from "react"
-import { navigate } from "@reach/router"
+import React from "react"
 
-//As this is a single-page site at the present moment, there is no need for a 404 page or any special 404 functionality. As additional pages are added, this should be deprecated and replaced with a static 404 page + 404 header.
+import Layout from "../components/layout"
+import GradientHeroSection from "../components/GradientHeroSection/GradientHeroSection.styled.js"
+import CTAButton from "../components/CTAButton/CTAButton.styled.js"
 
 const NotFoundPage = () => {
-  useEffect(() => {
-    navigate("/")
-  }, [])
-
-  return null
+  return (
+    <Layout>
+      <GradientHeroSection min_height={"70vh"}>
+        <h1>404 Error - Page Not Found</h1>
+        <p>
+          The link you are trying to access may have a typo or might just no
+          longer exist.
+        </p>
+        <CTAButton>
+          <a href="https://www.redcloversoftware.ca">Back to Home</a>
+        </CTAButton>
+      </GradientHeroSection>
+    </Layout>
+  )
 }
 
 export default NotFoundPage

@@ -1,38 +1,31 @@
 import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
-import { Link } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-import { OuterContainer, InnerContainer, HeaderLogo } from "./Footer.styled.js"
+import { OuterContainer, InnerContainer } from "./Footer.styled.js"
+import { PrismicRichText } from "@prismicio/react"
 
-const Footer = props => {
+const Footer = ({ logo, copyright_text }) => {
   return (
     <OuterContainer>
       <InnerContainer>
-        <HeaderLogo>
-          <Link
-            to="/"
+        <div>
+          <a
+            href="/"
             style={{
               color: `white`,
               textDecoration: `none`,
             }}
           >
-            <StaticImage
-              src="../../images/Logo.png"
+            <GatsbyImage
+              image={getImage(logo.localFile.childImageSharp)}
               width={321}
               quality={95}
               formats={["AUTO", "WEBP", "AVIF"]}
-              alt={"Logo for Red Clover Software Services Inc."}
+              alt={logo.alt}
             />
-          </Link>
-        </HeaderLogo>
-
-        <span>© 2022 Red Clover Software Services Inc.</span>
-        <span>
-          Contact:{" "}
-          <a href="mailto:frontdesk@redcloversoftware.ca">
-            frontdesk@redcloversoftware.ca
           </a>
-        </span>
+        </div>
+        <PrismicRichText field={copyright_text.richText} />
       </InnerContainer>
     </OuterContainer>
   )

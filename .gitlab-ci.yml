@@ -3,10 +3,10 @@ stages:
   - deploy
 
 variables:
-  BUCKET_NAME: rcs-staging
+  BUCKET_NAME: ${BUCKET_NAME_PRODUCTION}
 
 build-assets:
-  image: "node:16.15.0"
+  image: "node:18.13.0"
   stage: build
   cache:
     paths:

@@ -8,7 +8,6 @@ const CTAButton = styled.div`
   & a {
     width: 20rem;
     line-height: 5rem;
-
     transition: color 0.25s, background-image 0.25s;
     margin: 0 auto;
     text-align: center;
