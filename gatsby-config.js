@@ -10,6 +10,21 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+          siteUrl: "https://www.redcloversoftware.ca",
+      }
+  },
+	{
+		resolve: `gatsby-plugin-s3`,
+		options: {
+			bucketName: process.env.AWS_S3_NAME,
+			protocol: "https",
+			hostName: "www.redcloversoftware.ca",
+			
+		},
+	},
+    {
       resolve: "gatsby-plugin-manifest",
       options: {
         icon: "src/images/icon.png",
