@@ -22,6 +22,7 @@ module.exports = {
 			protocol: "https",
 			hostname: "www.redcloversoftware.ca",
       region: "us-east-1",
+      acl: null
 		},
 	},
     {
