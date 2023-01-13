@@ -20,7 +20,7 @@ module.exports = {
 		options: {
 			bucketName: process.env.DEST_S3_BUCKET,
 			protocol: "https",
-			hostName: "www.redcloversoftware.ca",
+			hostname: "www.redcloversoftware.ca",
 			
 		},
 	},
