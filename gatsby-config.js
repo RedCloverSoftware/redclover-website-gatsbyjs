@@ -18,7 +18,7 @@ module.exports = {
 	{
 		resolve: `gatsby-plugin-s3`,
 		options: {
-			bucketName: process.env.AWS_S3_NAME,
+			bucketName: process.env.DEST-S3-BUCKET,
 			protocol: "https",
 			hostName: "www.redcloversoftware.ca",
 			
