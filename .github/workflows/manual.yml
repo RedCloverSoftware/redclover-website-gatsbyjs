@@ -34,4 +34,4 @@ jobs:
           yarn install && yarn build && yarn deploy
       - name: Clear Cloudfront
         run: |
-          aws cloudfront create-invalidation --distribution-id $primary_cloudfront_id --paths \"/*\" && aws cloudfront create-invalidation --distribution-id $secondary_cloudfront_id --paths \"/*\"
+          aws cloudfront create-invalidation --distribution-id $primary_cloudfront_id --paths "/*" && aws cloudfront create-invalidation --distribution-id $secondary_cloudfront_id --paths "/*"
