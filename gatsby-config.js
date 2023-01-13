@@ -21,7 +21,7 @@ module.exports = {
 			bucketName: process.env.DEST_S3_BUCKET,
 			protocol: "https",
 			hostname: "www.redcloversoftware.ca",
-			
+      region: "us-east-1",
 		},
 	},
     {
