@@ -30,10 +30,10 @@ export const InnerContainer = styled.div`
     text-align: center;
     font-size: 30px;
     margin: 1rem 0;
-    min-height: 4rem;
+    min-height: 8rem;
   }
 
   & p {
-    min-height: 12rem;
+    min-height: 16rem;
   }
 `

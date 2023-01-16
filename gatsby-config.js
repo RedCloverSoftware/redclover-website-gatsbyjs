@@ -9,7 +9,7 @@ module.exports = {
     author: `Liam Sherman Parris`,
   },
   plugins: [
-    {
+  {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
           siteUrl: "https://www.redcloversoftware.ca",
@@ -18,7 +18,7 @@ module.exports = {
 	{
 		resolve: `gatsby-plugin-s3`,
 		options: {
-			bucketName: process.env.DEST_S3_BUCKET,
+			bucketName: process.env.DEST_S3_BUCKET || "failedtosetname",
 			protocol: "https",
 			hostname: "www.redcloversoftware.ca",
       region: "us-east-1",
