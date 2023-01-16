@@ -9,6 +9,7 @@ module.exports = {
     author: `Liam Sherman Parris`,
   },
   plugins: [
+  `gatsby-plugin-fix-fouc`,
   {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {

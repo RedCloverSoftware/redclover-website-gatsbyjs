@@ -3373,7 +3373,7 @@ callsites@^3.0.0:
   resolved "https://registry.yarnpkg.com/callsites/-/callsites-3.1.0.tgz#b3630abd8943432f54b3f0519238e33cd7df2f73"
   integrity sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==
 
-camel-case@^4.1.2:
+camel-case@^4, camel-case@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/camel-case/-/camel-case-4.1.2.tgz#9728072a954f805228225a6deea6b38461e1bd5a"
   integrity sha512-gxGWBrTT1JuMx6R+o5PTXMmUnhnVzLQ9SNutD4YqKtI6ap897t3tKECYla6gCWEkplXnlNybEkZg9GEGxKFCgw==
@@ -5742,6 +5742,13 @@ gatsby-plugin-feed@^4.21.0:
     gatsby-plugin-utils "^3.19.0"
     lodash.merge "^4.6.2"
     rss "^1.2.2"
+
+gatsby-plugin-fix-fouc@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-fix-fouc/-/gatsby-plugin-fix-fouc-1.0.1.tgz#d82a03b3e3b0c0320f2924cab924299386a2173f"
+  integrity sha512-oUMHtPA5fWGr+rDqeOWfVZ9Hsb6EE+2y1xxkBN5UQSfFeYpMPIW7KOeAXiN2wXS1iV6lq7Qba/9vWt+MudwyEQ==
+  dependencies:
+    camel-case "^4"
 
 gatsby-plugin-gatsby-cloud@^4.21.0:
   version "4.25.0"
