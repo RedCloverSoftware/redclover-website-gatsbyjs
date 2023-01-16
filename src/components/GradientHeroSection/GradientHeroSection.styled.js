@@ -24,7 +24,7 @@ const GradientHeroSection = styled.div`
     h1 {
       text-align: center;
       width: 90%;
-      font-size: 46px;
+      font-size: ${({heading_font_size = "46px"}) => heading_font_size};
     }
   }
 `

@@ -13,7 +13,7 @@ const ServiceTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <GradientHeroSection>
+      <GradientHeroSection heading_font_size={"44px"}>
         <PrismicRichText field={page_data.data.page_title.richText} />
       </GradientHeroSection>
 
