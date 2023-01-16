@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import { PrismicRichText } from "@prismicio/react"
 
 import Layout from "../../layout"
+import { PrimaryContentContainer } from "./ServiceTemplate.styled.js"
 import ContactSection from "../../ContactSection/ContactSection"
 import GradientHeroSection from "../../GradientHeroSection/GradientHeroSection.styled.js"
 
@@ -16,13 +17,13 @@ const ServiceTemplate = ({ data }) => {
         <PrismicRichText field={page_data.data.page_title.richText} />
       </GradientHeroSection>
 
-      <section>
+      <PrimaryContentContainer>
         {page_data.data.body.map(body_section => {
           return (
             <PrismicRichText field={body_section.primary.text_block.richText} />
           )
         })}
-      </section>
+      </PrimaryContentContainer>
 
       <ContactSection primary_heading={page_data.data.contact_cta_text.text} />
     </Layout>

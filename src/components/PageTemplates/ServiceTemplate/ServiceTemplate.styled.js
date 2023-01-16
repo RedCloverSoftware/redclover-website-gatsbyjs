@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const PrimaryContentContainer = styled.div`
+export const PrimaryContentContainer = styled.section`
   margin: 2rem 0;
   display: flex;
   flex-flow: column nowrap;
