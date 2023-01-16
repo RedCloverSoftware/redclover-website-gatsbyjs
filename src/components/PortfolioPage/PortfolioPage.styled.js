@@ -55,10 +55,11 @@ export const PortfolioItemSummary = styled.div`
     & > div {
       position: absolute;
       top: -50%;
-      left: -50%;
-      width: 200%;
+      left: 0%;
+      width: 100%;
       transform: translateY(-25%);
-      display: ${({ is_hovered = false }) => (is_hovered ? "block" : "none")};
+      transition: opacity 0.5s;
+      opacity: ${({ is_hovered = false }) => (is_hovered ? "1" : "0")};
     }
   }
 `
