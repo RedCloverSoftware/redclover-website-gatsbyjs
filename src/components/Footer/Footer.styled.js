@@ -27,5 +27,6 @@ export const InnerContainer = styled.div`
 
   & p {
     margin: 0;
+    text-align:center;
   }
 `
