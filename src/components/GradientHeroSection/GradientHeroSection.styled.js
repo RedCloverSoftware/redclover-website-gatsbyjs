@@ -1,13 +1,13 @@
 import styled from "styled-components"
 
-const GradientHeroSection = styled.div`
+const GradientHeroSection = styled.section`
   background: linear-gradient(
     180deg,
     #f19abb 0%,
     rgba(255, 46, 193, 0) 221.26%
   );
   border-radius: 0px 0px 10px 10px;
-  min-height: ${({ min_height = "30vh" }) => min_height};
+  min-height: ${({ min_height = "50vh" }) => min_height};
 
   display: flex;
   flex-flow: column nowrap;

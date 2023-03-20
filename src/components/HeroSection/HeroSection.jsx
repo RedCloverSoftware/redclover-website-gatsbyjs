@@ -26,7 +26,7 @@ const HeroSection = props => {
   }, [mockupDevicePosition])
 
   return (
-    <HeroOuterContainer>
+    <HeroOuterContainer role="banner">
       <HeroTextContentBlock>
         <h1>{props.primary_heading}</h1>
         <p>{props.primary_paragraph}</p>

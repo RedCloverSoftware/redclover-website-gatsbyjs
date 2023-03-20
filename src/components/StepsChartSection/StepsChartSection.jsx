@@ -13,7 +13,7 @@ import {
 
 const StepsChartSection = props => {
   const [hasUserClicked, setUserClicked] = useState(false)
-  const [hoverIndex, setHoverIndex] = useState(1)
+  const [hoverIndex, setHoverIndex] = useState(0)
   const [currentTimeoutId, setCurrentTimeoutId] = useState(-1)
 
   function handleHover(index) {
@@ -27,7 +27,7 @@ const StepsChartSection = props => {
       //Increment the hover state automatically every 4 secs
       let timeoutId = setTimeout(() => {
         if (hoverIndex < props.process_steps.length) {
-          setHoverIndex(hoverIndex + 1)
+          setHoverIndex(hoverIndex+1)
         } else {
           setHoverIndex(1)
         }
@@ -65,10 +65,8 @@ const StepsChartSection = props => {
               )}
             >
               <ProcessItem
-                key={current_step.procstep_primary_step_title.richText[0].text.replace(
-                  /\s\s+/g,
-                  "_"
-                )}
+                aria-expanded={index + 1 === hoverIndex ? "true" : "false"}
+                aria-controls={`proc-desc${index+1}`}
               >
                 <img
                   src={current_step.procstep_image.localFile.publicURL}
@@ -131,7 +129,7 @@ const StepsChartSection = props => {
                 "_"
               )}
             >
-              <ProcessItem>
+              <ProcessItem aria-expanded={index + 1 === hoverIndex ? "true" : "false"} aria-controls={`proc-desc-mobile${index+1}`} >
                 <img
                   src={current_step.procstep_image.localFile.publicURL}
                   alt={current_step.procstep_image.alt}
@@ -156,6 +154,7 @@ const StepsChartSection = props => {
                 </h3>
                 {windowWidth <= 1300 ? (
                   <p
+                    id={`proc-desc-mobile${index+1}`}
                     key={props.process_steps[
                       index
                     ].procstep_primary_step_title.richText[0].text.replace(
@@ -217,6 +216,7 @@ const StepsChartSection = props => {
         <ProcessDescriptionWrapper>
           {props.process_steps.map((current_step, index) => (
             <p
+              id={`proc-desc${index+1}`}
               key={current_step.procstep_primary_step_title.richText[0].text.replace(
                 /\s\s+/g,
                 "_"

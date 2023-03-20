@@ -1,6 +1,8 @@
 import * as React from "react"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
+import * as ScrollUtil from "../usescrollposition.js"
+
 import CTAButton from "../CTAButton/CTAButton.styled.js"
 import {
   HeaderOuterWrapper,
@@ -13,11 +15,16 @@ import {
 } from "./Header.styled.js"
 
 const Header = ({ logo, nav_links, cta_button }) => {
-  const [toggleMenu, setMenuToggle] = React.useState(false)
+  const [toggleMenu, setMenuToggle] = React.useState(false);
+  const [scroll, setScroll] = React.useState(0);
+
+  ScrollUtil.useScrollPosition(function setScrollPosition ({ currentPosition }) {
+    setScroll(currentPosition.y);
+  });
 
   return (
-    <HeaderOuterWrapper>
-      <DesktopHeaderContainer>
+    <HeaderOuterWrapper role="navigation">
+      <DesktopHeaderContainer id={`${scroll < -25 ? 'header-visible' : ''}`}>
         <HeaderInnerContainer>
           <div>
             <a href="/">
@@ -42,7 +49,7 @@ const Header = ({ logo, nav_links, cta_button }) => {
         </HeaderInnerContainer>
       </DesktopHeaderContainer>
 
-      <MobileHeaderContainer>
+      <MobileHeaderContainer role="navigation">
         <HeaderInnerContainer>
           <div>
             <a href="/">
