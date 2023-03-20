@@ -65,6 +65,7 @@ const Header = ({ logo, nav_links, cta_button }) => {
         </HeaderInnerContainer>
 
         <button
+          aria-label="Open Navigation"
           id="mobile-menu-open"
           onClick={() => {
             setMenuToggle(true)
@@ -82,6 +83,7 @@ const Header = ({ logo, nav_links, cta_button }) => {
           className={`${toggleMenu ? "make-menu-open" : "make-menu-close"}`}
         >
           <button
+            aria-label="Close Navigation"
             id="mobile-menu-close"
             onClick={() => {
               setMenuToggle(false)

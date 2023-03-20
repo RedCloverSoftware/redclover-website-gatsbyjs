@@ -57,6 +57,7 @@ const StepsChartSection = props => {
       <SectionIntroParagraph>{props.primary_paragraph}</SectionIntroParagraph>
       <InnerContainer>
         {props.process_steps.map((current_step, index) =>
+          /* Check if this is the last item */
           index + 1 === props.process_steps.length ? (
             <React.Fragment
               key={current_step.procstep_primary_step_title.richText[0].text.replace(
@@ -66,7 +67,7 @@ const StepsChartSection = props => {
             >
               <ProcessItem
                 aria-expanded={index + 1 === hoverIndex ? "true" : "false"}
-                aria-controls={`proc-desc${index+1}`}
+                aria-controls={windowWidth <= 1300 ? `proc-desc-mobile${index+1}` : `proc-desc${index+1}`}
               >
                 <img
                   src={current_step.procstep_image.localFile.publicURL}
@@ -92,6 +93,7 @@ const StepsChartSection = props => {
                 </h3>
                 {windowWidth <= 1300 ? (
                   <p
+                    id={`proc-desc-mobile${index+1}`}
                     key={props.process_steps[
                       index
                     ].procstep_primary_step_title.richText[0].text.replace(
@@ -129,7 +131,7 @@ const StepsChartSection = props => {
                 "_"
               )}
             >
-              <ProcessItem aria-expanded={index + 1 === hoverIndex ? "true" : "false"} aria-controls={`proc-desc-mobile${index+1}`} >
+              <ProcessItem aria-expanded={index + 1 === hoverIndex ? "true" : "false"} aria-controls={windowWidth <= 1300 ? `proc-desc-mobile${index+1}` : `proc-desc${index+1}`} >
                 <img
                   src={current_step.procstep_image.localFile.publicURL}
                   alt={current_step.procstep_image.alt}

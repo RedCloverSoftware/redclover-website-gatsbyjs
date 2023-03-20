@@ -1,6 +1,8 @@
 import React from "react"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import { OuterContainer, InnerContainer } from "./AboutUsSection.styled.js"
+
 
 const AboutUsSection = props => {
   return (
@@ -11,8 +13,11 @@ const AboutUsSection = props => {
           <p>{props.primary_paragraph}</p>
 
           <div>
-            <img
-              src={props.featured_image.url}
+            <GatsbyImage
+              image={getImage(
+                props.featured_image.localFile
+                  .childImageSharp
+              )}
               alt={props.featured_image.alt}
               className="bounce-animation"
             />
