@@ -3,7 +3,9 @@ import styled from "styled-components"
 export const HeaderOuterWrapper = styled.div`
   width: 100%;
   z-index: 600;
-  position: static;
+  position: fixed;
+  top: 0;
+  left: 0;
 
   @media screen and (max-width: 1452px) {
     & {
@@ -113,6 +115,12 @@ export const MobileMenuLinks = styled.div`
 export const DesktopHeaderContainer = styled.header`
   z-index: 600;
   display: none;
+  transition: background 0.45s;
+  
+  &#header-visible {
+    background: white;
+    position: sticky;
+  }
 
   @media screen and (min-width: 1300px) {
     & {
@@ -140,12 +148,13 @@ export const HeaderInnerContainer = styled.div`
 export const HeaderLinks = styled.div`
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-end;
+  width: 36%;
+  justify-content: space-around;
 
   & a {
     margin: 0 1rem;
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 22px;
+    font-weight: 800;
     text-decoration: none;
     color: black;
   }

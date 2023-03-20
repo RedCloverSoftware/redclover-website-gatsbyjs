@@ -9,11 +9,20 @@ export const PrimaryContentContainer = styled.section`
   margin-left: auto;
   margin-right: auto;
 
+  li {
+    list-style-position: inside;
+    background: url(/grn-chk-li-icon.svg) no-repeat left center;
+    margin: 0;
+    list-style: none;
+    line-height: 34px;
+    padding: 5px 10px 5px 34px;
+    font-size: 16px;
+  }
+  
   & > ul,
   ol {
     width: 50%;
-    margin: 0 0;
-    transform: translateX(1rem);
+    margin: 0 0 4rem 0;
   }
   h2 {
     font-size: 30px;
@@ -22,6 +31,11 @@ export const PrimaryContentContainer = styled.section`
   h3 {
     font-size: 22px;
     margin: 1rem 0;
+  }
+
+  p {
+    border-left: 4px solid #C86FAE;
+    padding: 0 1rem;
   }
 
   @media screen and (max-width: 1066px) {

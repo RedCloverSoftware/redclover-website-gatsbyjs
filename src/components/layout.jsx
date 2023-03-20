@@ -20,7 +20,7 @@ import styled from "styled-components"
 const OuterPageContainer = styled.div`
   margin: 0 auto;
   position: relative;
-  overflow-y: hidden;
+  overflow-y: unset;
 `
 
 const FooterContainer = styled.footer`

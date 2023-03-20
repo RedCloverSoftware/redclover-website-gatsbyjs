@@ -11,7 +11,7 @@ import {
 const ContactSection = props => {
   return (
     <OuterContainer gradient={props.gradient}>
-      <img src="/pink-bg-tri.svg" />
+      <img src="/pink-bg-tri.svg" alt="" role="presentation" />
 
       <InnerContainer>
         <SectionTitle>{props.primary_heading}</SectionTitle>
@@ -20,7 +20,7 @@ const ContactSection = props => {
         </CTAButton>
       </InnerContainer>
 
-      <img src="/blue-bg-tri.svg" />
+      <img src="/blue-bg-tri.svg" alt="" role="presentation" />
     </OuterContainer>
   )
 }

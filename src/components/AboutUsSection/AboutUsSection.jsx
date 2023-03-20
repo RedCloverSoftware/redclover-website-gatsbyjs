@@ -14,6 +14,7 @@ const AboutUsSection = props => {
             <img
               src={props.featured_image.url}
               alt={props.featured_image.alt}
+              className="bounce-animation"
             />
           </div>
 

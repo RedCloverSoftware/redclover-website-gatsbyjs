@@ -18,8 +18,8 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <Seo
-        title={home.data.page_title.text}
-        description={home.data.page_description.text}
+        title={home.data.page_title.richText[0].text}
+        description={home.data.page_description.richText[0].text}
       />
 
       <HomeHeroSection
