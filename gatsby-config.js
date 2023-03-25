@@ -10,21 +10,20 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-google-gtag`,
+      resolve: `gatsby-plugin-gtag`,
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
-        trackingIds: ["G-94XREEWD81"],
+        trackingId: "UA-261685646-1",
         // This object is used for configuration specific to this plugin
         pluginConfig: {
           // Puts tracking script in the head instead of the body
           head: true,
-          // Setting this parameter is also optional
-          respectDNT: true,
-          // Delays processing pageview events on route update (in milliseconds)
-          delayOnRouteUpdate: 0,
+          respectDNT: false,
+          anonymize: true,
         },
       },
     },
+    "gatsby-plugin-react-helmet",
     {
       resolve: `gatsby-plugin-hotjar`,
       options: {
