@@ -9,6 +9,14 @@ module.exports = {
     author: `Liam Sherman Parris`,
   },
   plugins: [
+  {
+    resolve: `gatsby-plugin-hotjar`,
+    options: {
+      includeInDevelopment: true, // optional parameter to include script in development
+      id: 3423837,
+      sv: 6,
+    },
+  },
   `gatsby-plugin-fix-fouc`,
   {
       resolve: `gatsby-plugin-canonical-urls`,
