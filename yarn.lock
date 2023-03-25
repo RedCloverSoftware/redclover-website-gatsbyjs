@@ -1029,6 +1029,13 @@
   dependencies:
     regenerator-runtime "^0.13.11"
 
+"@babel/runtime@^7.20.13":
+  version "7.21.0"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.21.0.tgz#5b55c9d394e5fcf304909a8b00c07dc217b56673"
+  integrity sha512-xwII0//EObnq89Ji5AKYQaRYiW/nZ3llSv29d49IuxPhKbtJoLP+9QUUZ4nVragQVtaVGeZrpB+ZtG/Pdy/POw==
+  dependencies:
+    regenerator-runtime "^0.13.11"
+
 "@babel/template@^7.16.7", "@babel/template@^7.18.10", "@babel/template@^7.20.7":
   version "7.20.7"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.20.7.tgz#a15090c2839a83b02aa996c0b4994005841fd5a8"
@@ -5763,13 +5770,13 @@ gatsby-plugin-gatsby-cloud@^4.21.0:
     lodash "^4.17.21"
     webpack-assets-manifest "^5.1.0"
 
-gatsby-plugin-google-analytics@^4.21.0:
-  version "4.25.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-4.25.0.tgz#9235094d56ddf945eda184c77e1dade08ef2c0da"
-  integrity sha512-fbHrViBAbJ0Ch2gcpuJQlGxWoapaNed42k75eR4gCiZPzaTUvCKagJgLG8ro8ukD1rfD594lgLzdSEaYYcH4WQ==
+gatsby-plugin-google-analytics@^5.8.0:
+  version "5.8.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-5.8.0.tgz#176796e62cf51a536ef33be879970f4dd66b0501"
+  integrity sha512-v88qu7upp2ojGxk5N4TxZROvzs27wqvKyFdsTgTIwi7RUW0QoRfyBVAXwMSLKNKyLVJxa9cQgLX8WZ4Nqv0aJg==
   dependencies:
-    "@babel/runtime" "^7.15.4"
-    minimatch "3.0.4"
+    "@babel/runtime" "^7.20.13"
+    minimatch "^3.1.2"
     web-vitals "^1.1.2"
 
 gatsby-plugin-google-fonts@^1.0.1:
@@ -8442,13 +8449,6 @@ mini-css-extract-plugin@1.6.2:
     loader-utils "^2.0.0"
     schema-utils "^3.0.0"
     webpack-sources "^1.1.0"
-
-minimatch@3.0.4:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.4.tgz#5166e286457f03306064be5497e8dbb0c3d32083"
-  integrity sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==
-  dependencies:
-    brace-expansion "^1.1.7"
 
 minimatch@^3.0.4, minimatch@^3.0.5, minimatch@^3.1.1, minimatch@^3.1.2:
   version "3.1.2"
