@@ -13,7 +13,7 @@
     "gatsby-plugin-feed": "^4.21.0",
     "gatsby-plugin-fix-fouc": "^1.0.1",
     "gatsby-plugin-gatsby-cloud": "^4.21.0",
-    "gatsby-plugin-google-analytics": "^4.21.0",
+    "gatsby-plugin-google-analytics": "^5.8.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-hotjar": "^1.1.1",
     "gatsby-plugin-image": "^2.21.0",
