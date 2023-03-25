@@ -15,16 +15,16 @@ import {
 } from "./Header.styled.js"
 
 const Header = ({ logo, nav_links, cta_button }) => {
-  const [toggleMenu, setMenuToggle] = React.useState(false);
-  const [scroll, setScroll] = React.useState(0);
+  const [toggleMenu, setMenuToggle] = React.useState(false)
+  const [scroll, setScroll] = React.useState(0)
 
-  ScrollUtil.useScrollPosition(function setScrollPosition ({ currentPosition }) {
-    setScroll(currentPosition.y);
-  });
+  ScrollUtil.useScrollPosition(function setScrollPosition({ currentPosition }) {
+    setScroll(currentPosition.y)
+  })
 
   return (
     <HeaderOuterWrapper role="navigation">
-      <DesktopHeaderContainer id={`${scroll < -25 ? 'header-visible' : ''}`}>
+      <DesktopHeaderContainer id={`${scroll < -25 ? "header-visible" : ""}`}>
         <HeaderInnerContainer>
           <div>
             <a href="/">

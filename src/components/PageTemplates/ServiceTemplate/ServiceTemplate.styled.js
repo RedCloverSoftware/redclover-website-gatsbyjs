@@ -18,7 +18,7 @@ export const PrimaryContentContainer = styled.section`
     padding: 5px 10px 5px 34px;
     font-size: 16px;
   }
-  
+
   & > ul,
   ol {
     width: 50%;
@@ -34,7 +34,7 @@ export const PrimaryContentContainer = styled.section`
   }
 
   p {
-    border-left: 4px solid #C86FAE;
+    border-left: 4px solid #c86fae;
     padding: 0 1rem;
   }
 
