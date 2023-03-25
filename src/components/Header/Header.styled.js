@@ -116,7 +116,7 @@ export const DesktopHeaderContainer = styled.header`
   z-index: 600;
   display: none;
   transition: background 0.45s;
-  
+
   &#header-visible {
     background: white;
     position: sticky;

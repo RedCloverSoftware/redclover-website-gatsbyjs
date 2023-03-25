@@ -10,53 +10,46 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        // The property ID; the tracking code won't be generated without it
-        trackingId: "G-94XREEWD81",
-        // Defines where to place the tracking script - `true` in the head and `false` in the body
-        head: true,
-        // Setting this parameter is optional
-        anonymize: true,
-        // Setting this parameter is also optional
-        respectDNT: true,
-        // Delays sending pageview hits on route update (in milliseconds)
-        pageTransitionDelay: 0,
-        // Defers execution of google analytics script after page load
-        defer: false,
-        // Any additional optional fields
-        sampleRate: 5,
-        siteSpeedSampleRate: 10,
-        cookieDomain: "www.redcloversoftware.ca",
-        // defaults to false
-        enableWebVitalsTracking: true,
-      }
-  },
-  {
-    resolve: `gatsby-plugin-hotjar`,
-    options: {
-      includeInDevelopment: true, // optional parameter to include script in development
-      id: 3423837,
-      sv: 6,
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: ["G-94XREEWD81"],
+        // This object is used for configuration specific to this plugin
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: true,
+          // Setting this parameter is also optional
+          respectDNT: true,
+          // Delays processing pageview events on route update (in milliseconds)
+          delayOnRouteUpdate: 0,
+        },
+      },
     },
-  },
-  `gatsby-plugin-fix-fouc`,
-  {
+    {
+      resolve: `gatsby-plugin-hotjar`,
+      options: {
+        includeInDevelopment: true, // optional parameter to include script in development
+        id: 3423837,
+        sv: 6,
+      },
+    },
+    `gatsby-plugin-fix-fouc`,
+    {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-          siteUrl: "https://www.redcloversoftware.ca",
-      }
-  },
-	{
-		resolve: `gatsby-plugin-s3`,
-		options: {
-			bucketName: process.env.DEST_S3_BUCKET || "failedtosetname",
-			protocol: "https",
-			hostname: "www.redcloversoftware.ca",
-      region: "us-east-1",
-      acl: null
-		},
-	},
+        siteUrl: "https://www.redcloversoftware.ca",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: process.env.DEST_S3_BUCKET || "failedtosetname",
+        protocol: "https",
+        hostname: "www.redcloversoftware.ca",
+        region: "us-east-1",
+        acl: null,
+      },
+    },
     {
       resolve: "gatsby-plugin-manifest",
       options: {
