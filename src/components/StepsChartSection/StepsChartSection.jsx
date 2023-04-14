@@ -13,7 +13,7 @@ import {
 
 const StepsChartSection = props => {
   const [hasUserClicked, setUserClicked] = useState(false)
-  const [hoverIndex, setHoverIndex] = useState(0)
+  const [hoverIndex, setHoverIndex] = useState(props.initialHoverIndex || 0)
   const [currentTimeoutId, setCurrentTimeoutId] = useState(-1)
 
   function handleHover(index) {

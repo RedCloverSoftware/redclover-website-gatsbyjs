@@ -4,7 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import CTAButton from "../CTAButton/CTAButton.styled.js"
 import { OuterContainer, InnerContainer } from "./ServicePoint.styled.js"
 
-const ServicePointsSection = props => {
+const ServicePoint = props => {
   const icon = getImage(props.service.service_point_icon.localFile)
 
   return (
@@ -27,4 +27,4 @@ const ServicePointsSection = props => {
   )
 }
 
-export default ServicePointsSection
+export default ServicePoint

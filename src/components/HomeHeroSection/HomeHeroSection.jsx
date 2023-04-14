@@ -9,7 +9,7 @@ import {
 
 import PortfolioTopItems from "../../images/portfolio/portfoliotopitems.webp"
 
-const HeroSection = props => {
+const HomeHeroSection = props => {
   const [mockupDevicePosition, setMockupDevicePosition] = useState(0)
 
   useEffect(() => {
@@ -41,7 +41,7 @@ const HeroSection = props => {
         id="device-mockups"
         device="iPhone X"
         color="gold"
-        portrait
+        portrait="true"
       >
         <div>
           <img
@@ -62,4 +62,4 @@ const HeroSection = props => {
   )
 }
 
-export default HeroSection
+export default HomeHeroSection

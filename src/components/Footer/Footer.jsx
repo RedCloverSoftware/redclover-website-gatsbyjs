@@ -4,7 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { OuterContainer, InnerContainer } from "./Footer.styled.js"
 import { PrismicRichText } from "@prismicio/react"
 
-const Footer = ({ logo, copyright_text }) => {
+const Footer = ({ logo, footer_text }) => {
   return (
     <OuterContainer>
       <InnerContainer>
@@ -17,6 +17,8 @@ const Footer = ({ logo, copyright_text }) => {
             }}
           >
             <GatsbyImage
+              role="link"
+              name="Company Logo"
               image={getImage(logo.localFile.childImageSharp)}
               width={321}
               quality={95}
@@ -25,7 +27,7 @@ const Footer = ({ logo, copyright_text }) => {
             />
           </a>
         </div>
-        <PrismicRichText field={copyright_text.richText} />
+        <PrismicRichText field={footer_text.richText} />
       </InnerContainer>
     </OuterContainer>
   )

@@ -39,7 +39,7 @@ const Header = ({ logo, nav_links, cta_button }) => {
           </div>
           <HeaderLinks>
             {nav_links.map(link => {
-              return <a href={link.page_link.url}>{link.link_title}</a>
+              return <a key={link.link_title.replace(/\W/g, '')} href={link.page_link.url}>{link.link_title}</a>
             })}
           </HeaderLinks>
 
@@ -102,7 +102,7 @@ const Header = ({ logo, nav_links, cta_button }) => {
           </button>
           <MobileMenuLinks>
             {nav_links.map(link => {
-              return <a href={link.page_link.url}>{link.link_title}</a>
+              return <a key={link.link_title.replace(/\W/g, '')} href={link.page_link.url}>{link.link_title}</a>
             })}
           </MobileMenuLinks>
         </MobileMenu>

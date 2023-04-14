@@ -39,7 +39,7 @@ const HeroSection = props => {
         id="device-mockups"
         device="iPhone X"
         color="gold"
-        portrait
+        portrait="true"
       >
         <div>
           <img
