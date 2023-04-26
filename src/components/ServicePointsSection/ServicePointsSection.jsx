@@ -13,7 +13,7 @@ const ServicePointsSection = props => {
     <OuterContainer id="services">
       <SectionTitle>{props.primary_heading}</SectionTitle>
       <InnerContainer>
-        {props.services.map((currentService, i) => (
+        {props.services && props.services.map((currentService, i) => (
           <ServicePoint service={currentService} key={i} />
         ))}
       </InnerContainer>

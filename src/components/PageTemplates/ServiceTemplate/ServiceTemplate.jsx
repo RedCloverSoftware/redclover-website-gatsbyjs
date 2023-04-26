@@ -20,7 +20,7 @@ const ServiceTemplate = ({ data }) => {
       <PrimaryContentContainer>
         {page_data.data.body.map(body_section => {
           return (
-            <PrismicRichText field={body_section.primary.text_block.richText} />
+            <PrismicRichText key={body_section.primary.text_block.richText[0].text.slice(15)} field={body_section.primary.text_block.richText} />
           )
         })}
       </PrimaryContentContainer>
