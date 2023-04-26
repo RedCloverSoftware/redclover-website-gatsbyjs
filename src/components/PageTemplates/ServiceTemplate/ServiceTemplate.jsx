@@ -20,7 +20,7 @@ const ServiceTemplate = ({ data }) => {
       <PrimaryContentContainer>
         {page_data.data.body.map(body_section => {
           return (
-            <PrismicRichText key={body_section.primary.text_block.richText[0].text.slice(15)} field={body_section.primary.text_block.richText} />
+            <PrismicRichText key={body_section.primary.text_block.text.slice(0,15)} field={body_section.primary.text_block.richText} />
           )
         })}
       </PrimaryContentContainer>
@@ -45,6 +45,7 @@ export const pageQuery = graphql`
             primary {
               text_block {
                 richText
+                text
               }
             }
             slice_type

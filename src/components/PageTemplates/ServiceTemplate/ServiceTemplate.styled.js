@@ -11,7 +11,7 @@ export const PrimaryContentContainer = styled.section`
 
   li {
     list-style-position: inside;
-    background: url(/grn-chk-li-icon.svg) no-repeat left center;
+    background: url("/grn-chk-li-icon.svg") left 8px no-repeat;
     margin: 0;
     list-style: none;
     line-height: 34px;
