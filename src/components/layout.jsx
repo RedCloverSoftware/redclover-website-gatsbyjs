@@ -89,6 +89,7 @@ const Layout = ({ children }) => {
         <main>{children}</main>
         <Footer
           logo={data.prismicFooter.data.footer_logo}
+          footer_text={data.prismicFooter.data.footer_text}
           copyright_text={data.prismicFooter.data.footer_text}
         />
       </OuterPageContainer>
