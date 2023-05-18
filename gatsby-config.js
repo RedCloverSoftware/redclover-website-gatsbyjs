@@ -1,7 +1,6 @@
-const path = require('path')
-const dotenv = require('dotenv')
-
-dotenv.config()
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 module.exports = {
   siteMetadata: {
@@ -24,11 +23,10 @@ module.exports = {
         },
       },
     },
-    "gatsby-plugin-react-helmet",
     {
       resolve: `gatsby-plugin-hotjar`,
       options: {
-        includeInDevelopment: true, // optional parameter to include script in development
+        includeInDevelopment: false,
         id: 3423837,
         sv: 6,
       },
@@ -48,12 +46,6 @@ module.exports = {
         hostname: "www.redcloversoftware.ca",
         region: "us-east-1",
         acl: null,
-      },
-    },
-    {
-      resolve: "gatsby-plugin-manifest",
-      options: {
-        icon: "src/images/icon.png",
       },
     },
     {
@@ -81,7 +73,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: path.resolve(__dirname, 'src', 'images'),
+        path: `${__dirname}/src/images`,
       },
     },
     {
@@ -119,7 +111,6 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-gatsby-cloud`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
